@@ -63,7 +63,7 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
     breakpoints: {
         576: {
             slidesPerView: 2,
-        },            
+        },
         768: {
             slidesPerView: 2,
             spaceBetween: 48,
@@ -74,18 +74,22 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
+function scrollActive() {
     const scrollY = window.pageYOffset
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id')
-        
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id')
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
+        }
+        else {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
+
+        /*document.querySelector('.nav__menu a[href*=' + 'contact' + ']').classList.add('active-link')*/
+
     })
 }
 window.addEventListener('scroll', scrollActive)
@@ -123,25 +127,5 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home__data`)
-sr.reveal(`.home__handle`, {delay: 700})
-sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom'})
-
-const sendEmail = (e) => {
-    e.preventDefault()
-
-    emailjs.sendForm(
-        'service_7o0rw1v',
-        'template_2864o3m',
-        e.target,
-        'z3CC7AaTCUjsb0TRG'
-      )
-      .then(
-        () => {
-          alert('Message successfully sent!')
-          window.location.reload(false)
-        },
-        () => {
-          alert('Failed to send the message, please try again')
-        }
-      )
-  }
+sr.reveal(`.home__handle`, { delay: 700 })
+sr.reveal(`.home__social, .home__scroll`, { delay: 900, origin: 'bottom' })
