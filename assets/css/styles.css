@@ -1270,6 +1270,7 @@ body.light-theme {
 
   .work__title {
     margin: .5rem;
+    margin-left: 0;
   }
 
   .testimonial__container {
