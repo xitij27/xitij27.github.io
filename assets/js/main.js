@@ -151,7 +151,8 @@ var chart = root.container.children.push(am5map.MapChart.new(root, {
     paddingTop: 20,
     paddingLeft: 20,
     paddingRight: 20,
-    maxZoomLevel: 5
+    maxZoomLevel: 5,
+    pinchZoom: false
     //homeGeoPoint: { latitude: 12.9716, longitude: 77.5946 }
 }));
 
