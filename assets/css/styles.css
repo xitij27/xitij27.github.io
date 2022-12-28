@@ -485,6 +485,18 @@ body.light-theme {
   margin-bottom: 2rem;
 }
 
+#chartdiv {
+  width: 320px;
+  height: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
 /*=============== SKILLS ===============*/
 .skills__container {
   row-gap: 2rem;
@@ -914,7 +926,7 @@ body.light-theme {
   margin-left: calc(50% - 100px);
 }
 
-.cubespinner > div {
+.cubespinner>div {
   position: absolute;
   width: 200px;
   height: 200px;
@@ -936,7 +948,8 @@ body.light-theme {
 .face2 {
   transform: rotateY(90deg) rotateZ(270deg) translateZ(100px);
   font-size: 50px;
-  color: #4e4e4e; /*f06529*/
+  color: #4e4e4e;
+  /*f06529*/
 }
 
 .face3 {
@@ -968,11 +981,11 @@ body.light-theme {
   color: #2db611;
 }
 
-.html-icon{
+.html-icon {
   color: #e77641;
 }
 
-.css-icon{
+.css-icon {
   color: #28a4d9;
 }
 
@@ -988,12 +1001,14 @@ body.light-theme {
   color: black;
 }
 
-.do-icon{
+.do-icon {
   color: #008bcf;
 }
+
 .cpp-icon {
   color: #004482;
 }
+
 .py-icon {
   color: #efd81d;
 }
@@ -1002,7 +1017,7 @@ body.light-theme {
   color: red;
 }
 
-.mongo-icon{
+.mongo-icon {
   color: #7df14f;
 }
 
@@ -1159,6 +1174,18 @@ body.light-theme {
     width: 360px;
     margin: 0 auto;
   }
+
+  #chartdiv {
+    width: 500px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -1291,6 +1318,4 @@ body.light-theme {
     padding: .4rem;
     border-radius: .5rem;
   }
-
-
 }
