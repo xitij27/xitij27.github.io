@@ -152,8 +152,8 @@ var chart = root.container.children.push(am5map.MapChart.new(root, {
     paddingLeft: 20,
     paddingRight: 20,
     maxZoomLevel: 5,
-    pinchZoom: false
-    //homeGeoPoint: { latitude: 12.9716, longitude: 77.5946 }
+    pinchZoom: false,
+    maxPanOut: 0
 }));
 
 chart.set("zoomControl", am5map.ZoomControl.new(root, {
@@ -166,41 +166,6 @@ var cont = chart.children.push(am5.Container.new(root, {
     x: 20,
     y: 40
 }));
-
-// Add labels and controls
-/*cont.children.push(am5.Label.new(root, {
-  centerY: am5.p50,
-  text: "Map"
-}));*/
-
-/*var switchButton = cont.children.push(am5.Button.new(root, {
-  themeTags: ["switch"],
-  centerY: am5.p50,
-  icon: am5.Circle.new(root, {
-    themeTags: ["icon"]
-  })
-}));
-
-switchButton.on("active", function() {
-  if (!switchButton.get("active")) {
-    chart.set("projection", am5map.geoMercator());
-    chart.set("panY", "translateY");
-    chart.set("rotationY", 0);
-    backgroundSeries.mapPolygons.template.set("fillOpacity", 0);
-  } else {
-    chart.set("projection", am5map.geoOrthographic());
-    chart.set("panY", "rotateY")
-
-    backgroundSeries.mapPolygons.template.set("fillOpacity", 0.1);
-  }
-});
-
-/*cont.children.push(
-  am5.Label.new(root, {
-    centerY: am5.p50,
-    text: "Globe"
-  })
-);*/
 
 // Create series for background fill
 // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/#Background_polygon
