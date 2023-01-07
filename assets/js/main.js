@@ -452,6 +452,7 @@ const sendEmail = (e) => {
         emailjs.sendForm('service_7o0rw1v', 'template_2864o3m', '#contact-form', 'z3CC7AaTCUjsb0TRG')
             .then(() => {
                 alert("Message sent ✅");
+                // find a way to empty form contents after submission
             })
     }
 }
