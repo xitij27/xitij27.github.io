@@ -159,7 +159,7 @@ var chart = root.container.children.push(am5map.MapChart.new(root, {
 chart.set("zoomControl", am5map.ZoomControl.new(root, {
     y: am5.p0,
     centerY: am5.p0
-  }));
+}));
 
 var cont = chart.children.push(am5.Container.new(root, {
     layout: root.horizontalLayout,
@@ -428,3 +428,32 @@ function addVisitedCity(longitude, latitude, title) {
 
 // Make stuff animate on load
 chart.appear(1000, 100);
+
+/*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+    contactName = document.getElementById('contact-name'),
+    contactEmail = document.getElementById('contact-email'),
+    contactSubject = document.getElementById('contact-subject'),
+    contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) => {
+    e.preventDefault()
+
+    if (contactName.value === '') {
+        alert("Please enter your name");
+    }
+    else if (contactEmail.value === '') {
+        alert("Please enter your email");
+    }
+    else if (contactMessage.value === '') {
+        alert("Please enter a message");
+    }
+    else {
+        emailjs.sendForm('service_7o0rw1v', 'template_2864o3m', '#contact-form', 'z3CC7AaTCUjsb0TRG')
+            .then(() => {
+                alert("Message sent ✅");
+            })
+    }
+}
+
+contactForm.addEventListener('submit', sendEmail)

@@ -726,20 +726,25 @@
                 <div class="contact__content">
                     <h3 class="contact__title">Or... send me a message through this form</h3>
 
-                    <form action="" class="contact__form" onsubmit={sendEmail}>
+                    <form action="" class="contact__form" id="contact-form" onsubmit={sendEmail}>
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Name</label>
-                            <input type="text" placeholder="Enter your name" class="contact__form-input">
+                            <input type="text" placeholder="Enter your name" name="name" class="contact__form-input" id="contact-name">
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Email</label>
-                            <input type="email" placeholder="Enter your email" class="contact__form-input">
+                            <input type="email" placeholder="Enter your email" name="email" class="contact__form-input" id="contact-email">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Subject</label>
+                            <input type="text" placeholder="Optional" name="subject" class="contact__form-input" id="contact-subject">
                         </div>
 
                         <div class="contact__form-div contact__form-area">
                             <label for="" class="contact__form-tag">Message</label>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Enter your message"
+                            <textarea name="message" id="contact-message" cols="30" rows="10" placeholder="Enter your message"
                                 class="contact__form-input"></textarea>
                         </div>
 
@@ -798,6 +803,9 @@
 
     <!--=============== MIXITUP FILTER ===============-->
     <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
