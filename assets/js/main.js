@@ -440,13 +440,13 @@ const sendEmail = (e) => {
     e.preventDefault()
 
     if (contactName.value === '') {
-        alert("Please enter your name");
+        alert("Please enter your name 😅");
     }
     else if (contactEmail.value === '') {
-        alert("Please enter your email");
+        alert("Please enter your email 📧");
     }
     else if (contactMessage.value === '') {
-        alert("Please enter a message");
+        alert("Please enter a message ✍️");
     }
     else {
         emailjs.sendForm('service_7o0rw1v', 'template_2864o3m', '#contact-form', 'z3CC7AaTCUjsb0TRG')
