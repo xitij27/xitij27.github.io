@@ -127,7 +127,7 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home__data`)
-sr.reveal(`.home__handle`, { delay: 700 })
+sr.reveal(`.home__handle`, { delay: 500 })
 sr.reveal(`.home__social, .home__scroll`, { delay: 900, origin: 'bottom' })
 
 
@@ -323,13 +323,10 @@ var livedCities = [
 ]
 
 for (var i = 0; i < livedCities.length; i++) {
-    var city = livedCities[i];
-    var visitedcity = visitedCities[i];
-    addLivedCity(city.longitude, city.latitude, city.title);
+    addLivedCity(livedCities[i].longitude, livedCities[i].latitude, livedCities[i].title);
 }
 
 for (var i = 0; i < visitedCities.length; i++) {
-    var visitedcity = visitedCities[i];
     addVisitedCity(visitedCities[i].longitude, visitedCities[i].latitude, visitedCities[i].title);
 }
 
